@@ -1,0 +1,28 @@
+#clockdiv { 
+  height = 50px;
+  width = 100px;
+  background-color: #3f4d29;
+  padding: 10px;
+  text-align: center;
+  max-width: 205px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+
+}
+
+#jstimer {
+  text-align: center;
+
+
+}
+
+.minutes, 
+.seconds,
+.smalltext {
+	color: #f3ffe1;
+
+  	
+  
+}
+  
