@@ -1,0 +1,64 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ section.settings.card_image | image_url: width: 500 }}" alt="{{section.settings.card_image.alt}}">
+  <div class="card-body">
+    <h5 class="card-title">{{ section.settings.footer_linklist_title}}</h5>
+    <p class="card-text">{{ section.settings.paragraph}}</p>
+    <a href="{{ section.settings.button_link}}" class="btn btn-primary">{{ section.settings.button_text}}</a>
+  </div>
+</div>
+<style>
+  .card .btn {
+    background-color : {{ section.settings.btn-color}}
+  }
+</style>  
+{% schema %}
+{
+    "name": "Bootstrap Card",
+    "tag": "section",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image"
+        },
+        {
+          "type": "text",
+          "id": "footer_linklist_title",
+          "label": "Heading",
+          "default": "Quick links"
+        },
+        {
+          "type": "richtext",
+          "id": "paragraph",
+          "label": "Card text"
+        },        
+        {
+            "type": "color",
+            "id": "btn-color",
+            "label": "Button Color",
+            "default": "#3b4d28"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button label",
+          "default": "Quick links"
+        }
+    ],
+    "presets": [{
+        "name": "Bootstrap Card",
+        "category": "Custom"
+    }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
